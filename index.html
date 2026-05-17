@@ -1,229 +1,303 @@
-<!DOCTYPE html>  <html class="light" lang="en"><head>  
-<meta charset="utf-8"/>  
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>  
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
-<script id="tailwind-config">  
-      tailwind.config = {  
-        darkMode: "class",  
-        theme: {  
-          extend: {  
-            "colors": {  
-                    "surface-dim": "#d8dadc",  
-                    "on-error": "#ffffff",  
-                    "on-primary": "#ffffff",  
-                    "on-tertiary": "#ffffff",  
-                    "surface-container": "#eceef0",  
-                    "secondary": "#00668a",  
-                    "outline-variant": "#c6c6cd",  
-                    "on-error-container": "#93000a",  
-                    "surface-bright": "#f7f9fb",  
-                    "on-secondary-container": "#004d6a",  
-                    "surface-variant": "#e0e3e5",  
-                    "secondary-container": "#40c2fd",  
-                    "primary-fixed-dim": "#bec6e0",  
-                    "surface-container-highest": "#e0e3e5",  
-                    "secondary-fixed": "#c4e7ff",  
-                    "on-secondary-fixed": "#001e2c",  
-                    "background": "#f7f9fb",  
-                    "on-tertiary-fixed": "#271901",  
-                    "surface-container-lowest": "#ffffff",  
-                    "tertiary-fixed-dim": "#dec29a",  
-                    "on-surface": "#191c1e",  
-                    "secondary-fixed-dim": "#7bd0ff",  
-                    "error-container": "#ffdad6",  
-                    "surface-container-low": "#f2f4f6",  
-                    "on-primary-fixed": "#131b2e",  
-                    "tertiary-fixed": "#fcdeb5",  
-                    "outline": "#76777d",  
-                    "on-surface-variant": "#45464d",  
-                    "on-tertiary-fixed-variant": "#574425",  
-                    "inverse-primary": "#bec6e0",  
-                    "on-background": "#191c1e",  
-                    "on-primary-fixed-variant": "#3f465c",  
-                    "error": "#ba1a1a",  
-                    "on-primary-container": "#7c839b",  
-                    "tertiary": "#000000",  
-                    "on-secondary": "#ffffff",  
-                    "primary-fixed": "#dae2fd",  
-                    "surface-tint": "#565e74",  
-                    "surface-container-high": "#e6e8ea",  
-                    "surface": "#f7f9fb",  
-                    "inverse-surface": "#2d3133",  
-                    "on-tertiary-container": "#98805d",  
-                    "inverse-on-surface": "#eff1f3",  
-                    "primary-container": "#131b2e",  
-                    "tertiary-container": "#271901",  
-                    "primary": "#000000",  
-                    "on-secondary-fixed-variant": "#004c69"  
-            },  
-            "borderRadius": {  
-                    "DEFAULT": "0.25rem",  
-                    "lg": "0.5rem",  
-                    "xl": "0.75rem",  
-                    "full": "9999px"  
-            },  
-            "spacing": {  
-                    "container-max": "1280px",  
-                    "section-gap": "80px",  
-                    "margin-desktop": "48px",  
-                    "margin-mobile": "16px",  
-                    "unit": "8px",  
-                    "gutter": "24px"  
-            },  
-            "fontFamily": {  
-                    "headline-md": ["Sora"],  
-                    "headline-lg-mobile": ["Sora"],  
-                    "display-xl": ["Sora"],  
-                    "label-caps": ["Hanken Grotesk"],  
-                    "body-md": ["Hanken Grotesk"],  
-                    "headline-lg": ["Sora"],  
-                    "body-lg": ["Hanken Grotesk"]  
-            },  
-            "fontSize": {  
-                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],  
-                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],  
-                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],  
-                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],  
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],  
-                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],  
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]  
-            }  
-          },  
-        },  
-      }  
-    </script>  
-<style>  
-        .material-symbols-outlined {  
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;  
-        }  
-        .hide-scrollbar::-webkit-scrollbar { display: none; }  
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }  
-    </style>  
-</head>  
-<body class="bg-background font-body-md text-on-background min-h-screen flex overflow-hidden">  
-<!-- SideNavBar Shell -->  
-<aside class="hidden lg:flex flex-col h-screen sticky top-0 p-4 space-y-4 w-64 bg-surface-container-low border-r border-outline-variant">  
-<div class="flex items-center gap-3 px-2 py-4">  
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">  
-<span class="material-symbols-outlined">admin_panel_settings</span>  
-</div>  
-<div>  
-<h2 class="font-headline-md text-headline-md text-primary leading-tight">Admin Panel</h2>  
-<p class="font-label-caps text-label-caps text-on-surface-variant opacity-70">System Controller</p>  
-</div>  
-</div>  
-<nav class="flex-1 space-y-1">  
-<!-- Navigation Items Mapping -->  
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#">  
-<span class="material-symbols-outlined">inventory_2</span>  
-<span class="font-label-caps text-label-caps">Inventory</span>  
-</a>  
-<!-- Active Tab: Price Manager -->  
-<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-xl font-bold translate-x-1 transition-transform" href="#">  
-<span class="material-symbols-outlined">payments</span>  
-<span class="font-label-caps text-label-caps">Price &amp; Policy Manager</span>  
-</a>  
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#">  
-<span class="material-symbols-outlined">monitoring</span>  
-<span class="font-label-caps text-label-caps">Sales Analytics</span>  
-</a>  
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#">  
-<span class="material-symbols-outlined">headset_mic</span>  
-<span class="font-label-caps text-label-caps">Support</span>  
-</a>  
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#">  
-<span class="material-symbols-outlined">settings</span>  
-<span class="font-label-caps text-label-caps">Settings</span>  
-</a><a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#"><span class="material-symbols-outlined">payments</span><span class="font-label-caps text-label-caps">Payment &amp; Policies</span></a>  
-</nav>  
-<div class="pt-4 border-t border-outline-variant space-y-4">  
-<div class="flex items-center gap-3 px-2">  
-<img alt="Admin User Profile" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a middle-aged male administrator in a high-tech office environment. He is wearing a crisp white shirt and subtle framed glasses, looking directly at the camera with a confident and helpful expression. The lighting is bright and even, reflecting a clean and modern workspace aesthetic. The overall mood is one of technological mastery and reliable leadership within a corporate tech setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFnnXUDlS3F-raFW7rVc9YGk0fbwpUirLPqu1N87m7u3zJeqrwhE7QRG8FRwSdWH2NL_kRxybAJ5RXKp9zJyUbE1P4SAviuPe2qnb7W4JH72oRnMNTqaA9MU043pS3qPmIn5f3T7PK_4RCNs6gsDwXP0eFcqxBrs5YkRpoKUjapOrts0gh7FpTAvzBGWU2PFFhiMn_eGnzYAASNez8X6wYuJeGH5vYIXgDa82jGmQY_jdF6kbM0uN0wqROxhDPvnxuuZEWQMzxOXc"/>  
-<div>  
-<p class="font-label-caps text-label-caps text-on-surface font-bold">Admin User</p>  
-<p class="text-[10px] text-on-surface-variant">Global Access</p>  
-</div>  
-</div>  
-<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-caps text-label-caps hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">  
-<span class="material-symbols-outlined text-[18px]">description</span>  
-                Generate Report  
-            </button>  
-</div>  
-</aside>  
-<!-- Main Content Canvas -->  
-<main class="flex-1 overflow-y-auto hide-scrollbar flex flex-col">  
-<!-- Header -->  
-<header class="sticky top-0 z-10 h-20 px-margin-desktop flex items-center justify-between bg-surface-bright/80 backdrop-blur-md border-b border-outline-variant">  
-<div class="flex items-center gap-4">  
-<h1 class="font-headline-md text-headline-md text-primary">Price Management</h1>  
-<div class="px-3 py-1 bg-surface-container-high rounded-full">  
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Live Updates</span>  
-</div>  
-</div>  
-<div class="flex items-center gap-gutter">  
-<div class="relative group">  
-<span class="absolute inset-y-0 left-3 flex items-center text-outline">  
-<span class="material-symbols-outlined">search</span>  
-</span>  
-<input class="bg-surface-container-low border-none focus:ring-1 focus:ring-secondary rounded-lg pl-10 pr-4 py-2 w-64 text-body-md" placeholder="Search SKU or Brand..." type="text"/>  
-</div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-<div class="flex items-center gap-3">  
-<button class="p-2 hover:bg-surface-container-low rounded-full transition-all text-on-surface-variant">  
-<span class="material-symbols-outlined">notifications</span>  
-</button>  
-<button class="p-2 hover:bg-surface-container-low rounded-full transition-all text-on-surface-variant">  
-<span class="material-symbols-outlined">person</span>  
-</button>  
-</div>  
-</div>  
-</header>  
-<!-- Content Area -->  
-<div class="p-margin-desktop space-y-section-gap">  
-<!-- Sales Analytics Overview Bento Grid -->  
-<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">  
-<div class="md:col-span-8 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-col gap-4">  
-<div class="flex justify-between items-center">  
-<h3 class="font-label-caps text-label-caps text-on-surface-variant">Price Performance vs Competition</h3>  
-<div class="flex items-center gap-4">  
-<div class="flex items-center gap-2">  
-<span class="w-3 h-3 rounded-full bg-secondary"></span>  
-<span class="text-[12px] font-label-caps">TechResell</span>  
-</div>  
-<div class="flex items-center gap-2">  
-<span class="w-3 h-3 rounded-full bg-outline-variant"></span>  
-<span class="text-[12px] font-label-caps">Market Average</span>  
-</div>  
-</div>  
-</div>  
-<div class="flex-1 min-h-[200px] flex items-end gap-2 px-2">  
-<!-- Mock Chart Bars -->  
-<div class="flex-1 bg-secondary/10 rounded-t-md relative group h-[40%]"><div class="absolute bottom-full left-0 right-0 h-[60%] bg-secondary rounded-t-md mb-0.5"></div></div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-<div class="flex-1 bg-secondary/10 rounded-t-md relative group h-[30%]"><div class="absolute bottom-full left-0 right-0 h-[70%] bg-secondary rounded-t-md mb-0.5"></div></div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-<div class="flex-1 bg-secondary/10 rounded-t-md relative group h-[50%]"><div class="absolute bottom-full left-0 right-0 h-[45%] bg-secondary rounded-t-md mb-0.5"></div></div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-<div class="flex-1 bg-secondary/10 rounded-t-md relative group h-[45%]"><div class="absolute bottom-full left-0 right-0 h-[50%] bg-secondary rounded-t-md mb-0.5"></div></div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-<div class="flex-1 bg-secondary/10 rounded-t-md relative group h-[60%]"><div class="absolute bottom-full left-0 right-0 h-[35%] bg-secondary rounded-t-md mb-0.5"></div></div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-<div class="flex-1 bg-secondary/10 rounded-t-md relative group h-[35%]"><div class="absolute bottom-full left-0 right-0 h-[65%] bg-secondary rounded-t-md mb-0.5"></div></div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-<div class="flex-1 bg-secondary/10 rounded-t-md relative group h-[55%]"><div class="absolute bottom-full left-0 right-0 h-[40%] bg-secondary rounded-t-md mb-0.5"></div></div><div class="flex items-center gap-3 px-4 py-2 bg-surface-container-low rounded-lg border border-outline-variant"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">admin_panel_settings</span><span class="text-[12px] font-label-caps">Data Privacy</span><label class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox"/><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div></label></div>  
-</div>  
-</div>  
-<div class="md:col-span-4 grid grid-rows-2 gap-gutter">  
-<div class="bg-primary-container p-6 rounded-xl text-on-primary flex flex-col justify-between">  
-<div>  
-<p class="font-label-caps text-label-caps opacity-70">Price Wins Today</p>  
-<h4 class="font-headline-lg text-headline-lg">142</h4>  
-</div>  
-<div class="flex items-center gap-2 text-secondary-container">  
-<span class="material-symbols-outlined">trending_up</span>  
-<span class="font-label-caps text-label-caps">+12.5% from yesterday</span>  
-</div>  
-</div>  
-<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant flex flex-col justify-between">  
-<div>  
-<p class="font-label-caps text-label-caps text-on-surface-variant">Under-priced items</p>  
-<h4 class="font-headline-lg text-headline-lg text-error">28</h4>  
-</div>  
-<button class="text-secondary font-label-caps text-label-caps flex items-center gap-1 hover:underline">  
-                            Review Items <span class="m
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout | Zero bd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        input:focus {
+            border-bottom-color: transparent !important;
+            box-shadow: none !important;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface-tint": "#565e74",
+                        "secondary-fixed-dim": "#7bd0ff",
+                        "secondary": "#00668a",
+                        "on-tertiary-container": "#98805d",
+                        "on-primary-container": "#7c839b",
+                        "primary-fixed": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "primary-fixed-dim": "#bec6e0",
+                        "primary-container": "#131b2e",
+                        "tertiary-fixed": "#fcdeb5",
+                        "surface": "#f7f9fb",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "primary": "#000000",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary-container": "#40c2fd",
+                        "on-secondary-container": "#004d6a",
+                        "on-background": "#191c1e",
+                        "tertiary": "#000000",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed": "#271901",
+                        "on-secondary-fixed-variant": "#004c69",
+                        "secondary-fixed": "#c4e7ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "on-secondary-fixed": "#001e2c",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface": "#191c1e",
+                        "tertiary-container": "#271901",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#c6c6cd",
+                        "on-surface-variant": "#45464d",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container": "#eceef0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-md": ["Sora"],
+                        "display-xl": ["Sora"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-50 flex justify-between items-center px-margin-desktop h-20 w-full max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl shadow-sm">
+<div class="flex items-center gap-gutter">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary" href="#">Zero bd</a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Deals</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gamer Zone</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Lifestyle</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Dashboard</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high/50 rounded-lg transition-transform active:scale-95">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high/50 rounded-lg transition-transform active:scale-95">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<h1 class="font-headline-lg text-headline-lg mb-12">Checkout</h1>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: User Details & Payment -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Shipping Address Section -->
+<section class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline-md text-headline-md">Shipping Details</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-outline mb-2 block">FULL NAME</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-outline mb-2 block">EMAIL ADDRESS</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="john@example.com" type="email"/>
+</div>
+<div class="relative md:col-span-2">
+<label class="font-label-caps text-label-caps text-outline mb-2 block">SHIPPING ADDRESS</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="House 24, Road 7, Block D, Banani, Dhaka" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-outline mb-2 block">CONTACT NUMBER</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="+880 1XXX-XXXXXX" type="tel"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-outline mb-2 block">CITY</label>
+<select class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface appearance-none">
+<option>Dhaka</option>
+<option>Chattogram</option>
+<option>Sylhet</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Payment Selection Section -->
+<section class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</span>
+<h2 class="font-headline-md text-headline-md">Payment Method</h2>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- bKash/Nagad Option -->
+<label class="relative flex items-center p-6 bg-surface-container-lowest border border-outline-variant rounded-lg cursor-pointer hover:border-secondary transition-all group">
+<input checked="" class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="payment" type="radio"/>
+<div class="ml-4 flex-grow">
+<span class="font-headline-md text-body-lg block">bKash / Nagad</span>
+<span class="text-on-surface-variant text-body-md">Instant mobile payment</span>
+</div>
+<img alt="Payment Logos" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAji6P-bwV5_NVfJQ1Ft6kFd3kXsQXTcd2yqw2m96XhTqyLb8h7jGMmzBwwSOAMhR-lRNEdCVC2JA6aG7uDdN7ZYqOPDCPsbHUezJVGup3GYy4BKpwHzNOWKOdRgU0aj23AA1U097VTGa1XrGGiawPmRaTx8R83h5Dk-gohmQpbWLGB06lTf-xXIvlP8AbAdgmbXot0RoAk-SigTH3w2ybaYdeMTYD4herpQNwrY1LtOUzmNjOweY2g639JXiDZOZVk24nj6aMlXxg"/>
+</label>
+<!-- Bank Transfer Option -->
+<label class="relative flex items-center p-6 bg-surface-container-lowest border border-outline-variant rounded-lg cursor-pointer hover:border-secondary transition-all group">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="payment" type="radio"/>
+<div class="ml-4 flex-grow flex items-center gap-3">
+<div>
+<span class="font-headline-md text-body-lg block">Bangladesh Bank Transfer</span>
+<span class="text-on-surface-variant text-body-md">Direct bank account settlement</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="account_balance">account_balance</span>
+</label>
+<!-- Visa Card Option -->
+<label class="relative flex items-center p-6 bg-surface-container-lowest border border-outline-variant rounded-lg cursor-pointer hover:border-secondary transition-all group">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="payment" type="radio"/>
+<div class="ml-4 flex-grow">
+<span class="font-headline-md text-body-lg block">Visa Card</span>
+<span class="text-on-surface-variant text-body-md">Credit or Debit cards</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="credit_card">credit_card</span>
+</label>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary (Bento/Card) -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant sticky top-32">
+<h2 class="font-headline-md text-headline-md mb-8">Order Summary</h2>
+<div class="space-y-6 mb-8">
+<!-- Item 1 -->
+<div class="flex gap-4 items-center">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="D9 Earphones" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPrOrPD_5CqC7SXyCSmBqXqmUk9UR58mloCd0k8T-gmqfyo5Tb0GeS5kfv1Qb0tgjfX5fQgdNqK6QnkS7PxyZWKV8B4OPzvNjv5UDnd38461k7552xQn-gQtAtYFWAJZV6LXehTTv6YaHvV5fxNVfAqKy3KEQJH7-NKFe_lJqZu6sD_ybLBPPsZi6xrv6WlT8QYI-McbcgdMsCY3mfMejDzurMQSKXBGlSq5_YeyANbOZf238M-7jRKoCjXjfqU9pqTNRUlc3-Swk"/>
+</div>
+<div class="flex-grow">
+<p class="font-body-md font-bold text-on-surface">D9 Earphones</p>
+<p class="text-on-surface-variant text-body-md">Silver Polish Edition</p>
+</div>
+<p class="font-body-md font-bold">৳1,450</p>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4 items-center">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Charger Fan" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1AC0Bb3wwhHPWkugjiolTh0McuSblJX78Wl3xxeZjPgxiOMAT7phW-HkZsx9HYNK8abQZTyfCfGvsLKAgn49-EUfcAaYmGgEdsgaxpFa931uzi-ajKwl_7t5iqG-5w8SM5crluubeScSy84JtSnzyXqx9oZZfcCSD4HhNspvL7v2vwfEUuJYaJBVLfAGPH2BWFblLG07yvaRXX4niKUv0YhhIq6g20tLLl7H8kVLMJnAoCKyM9-pRrpVePb29QtXMR_tJtmMAvk"/>
+</div>
+<div class="flex-grow">
+<p class="font-body-md font-bold text-on-surface">Charger Fan</p>
+<p class="text-on-surface-variant text-body-md">Minimal Desktop White</p>
+</div>
+<p class="font-body-md font-bold">৳2,100</p>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-4 items-center">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Aurbuds" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv_A_MlhZv4dkfujfD4mdZkWG_DCexnnIaHhpn-M4cdqbkIGphN9NttncA677_UN_bc89lUgPYMLZ_u5QfPrUQHeIspQ0BqvAyRytpCLQBK1T5Otknq2r-VtJni1RBMgqtNtUV5IbcX9r_v9_VIrr5b5v4_OEU1kOMOghq_O9nbGq3bcu32-4feHlCU30InyMcFPesExI3NBGsUGmB3J63TwcsSTAR7nCIK5xbxRDTv39gALoRBg4dWJ-WNMQKqjzviwbRvnhUhWI"/>
+</div>
+<div class="flex-grow">
+<p class="font-body-md font-bold text-on-surface">Aurbuds</p>
+<p class="text-on-surface-variant text-body-md">Deep Black ANC</p>
+</div>
+<p class="font-body-md font-bold">৳3,800</p>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-6 space-y-4">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="text-body-md">Subtotal</span>
+<span class="text-body-md">৳7,350</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="text-body-md">Shipping</span>
+<span class="text-body-md">৳60</span>
+</div>
+<div class="flex justify-between items-center pt-4">
+<span class="font-headline-md text-headline-md">Total</span>
+<span class="font-headline-md text-headline-md text-secondary">৳7,410</span>
+</div>
+</div>
+<button class="w-full mt-8 bg-primary text-on-primary py-4 rounded-lg font-headline-md text-body-lg hover:bg-on-surface-variant transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+                        Place Order
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="mt-4 text-center text-on-surface-variant text-label-caps flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="lock">lock</span>
+                        SECURE ENCRYPTED TRANSACTION
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-surface-container-highest mt-section-gap">
+<div class="w-full px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between items-start gap-gutter max-w-container-max mx-auto">
+<div class="max-w-xs">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-4">Zero bd</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Your premier destination for high-performance gamer gear and curated lifestyle technology.</p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-8">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps text-on-surface font-bold">COMPANY</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Store Locator</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps text-on-surface font-bold">SUPPORT</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Warranty Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Support</a>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-8 px-margin-desktop text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Zero bd Electronics. Built for Performance.</p>
+</div>
+</footer>
+</body></html>
