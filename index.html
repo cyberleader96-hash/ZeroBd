@@ -3,301 +3,259 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Checkout | Zero bd</title>
+<title>TechResell | Premium Tech Marketplace</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d8dadc",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "secondary": "#00668a",
+                    "outline-variant": "#c6c6cd",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f7f9fb",
+                    "on-secondary-container": "#004d6a",
+                    "surface-variant": "#e0e3e5",
+                    "secondary-container": "#40c2fd",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-fixed": "#c4e7ff",
+                    "on-secondary-fixed": "#001e2c",
+                    "background": "#f7f9fb",
+                    "on-tertiary-fixed": "#271901",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#dec29a",
+                    "on-surface": "#191c1e",
+                    "secondary-fixed-dim": "#7bd0ff",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-fixed": "#131b2e",
+                    "tertiary-fixed": "#fcdeb5",
+                    "outline": "#76777d",
+                    "on-surface-variant": "#45464d",
+                    "on-tertiary-fixed-variant": "#574425",
+                    "inverse-primary": "#bec6e0",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#7c839b",
+                    "tertiary": "#000000",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#dae2fd",
+                    "surface-tint": "#565e74",
+                    "surface-container-high": "#e6e8ea",
+                    "surface": "#f7f9fb",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-container": "#98805d",
+                    "inverse-on-surface": "#eff1f3",
+                    "primary-container": "#131b2e",
+                    "tertiary-container": "#271901",
+                    "primary": "#000000",
+                    "on-secondary-fixed-variant": "#004c69"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Sora"],
+                    "headline-lg-mobile": ["Sora"],
+                    "display-xl": ["Sora"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Sora"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
-        input:focus {
-            border-bottom-color: transparent !important;
-            box-shadow: none !important;
+        .gamer-glow:hover {
+            box-shadow: 0 0 12px 2px rgba(64, 194, 253, 0.2);
+            border-color: #40c2fd;
+        }
+        .lifestyle-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04);
         }
     </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-lowest": "#ffffff",
-                        "inverse-surface": "#2d3133",
-                        "surface-tint": "#565e74",
-                        "secondary-fixed-dim": "#7bd0ff",
-                        "secondary": "#00668a",
-                        "on-tertiary-container": "#98805d",
-                        "on-primary-container": "#7c839b",
-                        "primary-fixed": "#dae2fd",
-                        "error": "#ba1a1a",
-                        "outline": "#76777d",
-                        "on-tertiary-fixed-variant": "#574425",
-                        "primary-fixed-dim": "#bec6e0",
-                        "primary-container": "#131b2e",
-                        "tertiary-fixed": "#fcdeb5",
-                        "surface": "#f7f9fb",
-                        "on-primary": "#ffffff",
-                        "inverse-primary": "#bec6e0",
-                        "primary": "#000000",
-                        "on-primary-fixed": "#131b2e",
-                        "secondary-container": "#40c2fd",
-                        "on-secondary-container": "#004d6a",
-                        "on-background": "#191c1e",
-                        "tertiary": "#000000",
-                        "surface-variant": "#e0e3e5",
-                        "on-tertiary-fixed": "#271901",
-                        "on-secondary-fixed-variant": "#004c69",
-                        "secondary-fixed": "#c4e7ff",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "surface-bright": "#f7f9fb",
-                        "on-error-container": "#93000a",
-                        "tertiary-fixed-dim": "#dec29a",
-                        "on-secondary-fixed": "#001e2c",
-                        "surface-container-low": "#f2f4f6",
-                        "surface-container-highest": "#e0e3e5",
-                        "surface-container-high": "#e6e8ea",
-                        "on-surface": "#191c1e",
-                        "tertiary-container": "#271901",
-                        "error-container": "#ffdad6",
-                        "surface-dim": "#d8dadc",
-                        "outline-variant": "#c6c6cd",
-                        "on-surface-variant": "#45464d",
-                        "inverse-on-surface": "#eff1f3",
-                        "background": "#f7f9fb",
-                        "on-error": "#ffffff",
-                        "on-primary-fixed-variant": "#3f465c",
-                        "surface-container": "#eceef0"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-mobile": "16px",
-                        "unit": "8px",
-                        "container-max": "1280px",
-                        "section-gap": "80px",
-                        "margin-desktop": "48px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "headline-lg-mobile": ["Sora"],
-                        "headline-lg": ["Sora"],
-                        "body-lg": ["Hanken Grotesk"],
-                        "label-caps": ["Hanken Grotesk"],
-                        "headline-md": ["Sora"],
-                        "display-xl": ["Sora"],
-                        "body-md": ["Hanken Grotesk"]
-                    },
-                    "fontSize": {
-                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
-                    }
-                },
-            },
-        }
-    </script>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
-<!-- TopNavBar (Shared Component) -->
-<header class="sticky top-0 z-50 flex justify-between items-center px-margin-desktop h-20 w-full max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl shadow-sm">
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-bright/80 dark:bg-surface-container-lowest/80 backdrop-blur-md shadow-sm dark:shadow-none border-b border-outline-variant dark:border-outline">
 <div class="flex items-center gap-gutter">
-<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary" href="#">Zero bd</a>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-secondary-container">Zero bd</span>
 <nav class="hidden md:flex gap-6 items-center">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Deals</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gamer Zone</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Lifestyle</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-secondary-container border-b-2 border-secondary dark:border-secondary-container pb-1" href="#">Deals</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-secondary-container transition-colors" href="#">Gamer Zone</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-secondary-container transition-colors" href="#">Lifestyle</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-secondary-container transition-colors" href="#">Dashboard</a>
 </nav>
 </div>
 <div class="flex items-center gap-4">
-<button class="p-2 hover:bg-surface-container-high/50 rounded-lg transition-transform active:scale-95">
-<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+<div class="hidden lg:flex items-center bg-surface-container px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md py-0 w-48" placeholder="Search tech..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container-low rounded-lg transition-all active:scale-90">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
 </button>
-<button class="p-2 hover:bg-surface-container-high/50 rounded-lg transition-transform active:scale-95">
-<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+<button class="p-2 hover:bg-surface-container-low rounded-lg transition-all active:scale-90">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
 </button>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-5 py-2 rounded-lg font-label-caps text-label-caps active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                    Cart
+                </button>
+</div>
 </div>
 </header>
-<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
-<h1 class="font-headline-lg text-headline-lg mb-12">Checkout</h1>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-<!-- Left Column: User Details & Payment -->
-<div class="lg:col-span-7 space-y-12">
-<!-- Shipping Address Section -->
-<section class="space-y-6">
-<div class="flex items-center gap-3">
-<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</span>
-<h2 class="font-headline-md text-headline-md">Shipping Details</h2>
+<main class="pt-20">
+<!-- Hero Section: Best Market Deals -->
+<section class="relative w-full min-h-[716px] flex items-center px-margin-desktop py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="A high-performance gaming setup with vibrant neon blue and purple ambient lighting illuminating sleek hardware on a minimalist desk. The background is a clean, modern studio space with high-key lighting that emphasizes tech precision and premium quality. The overall aesthetic is futuristic, sharp, and belongs to a high-end technological marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEV8OHy-TutjWVG3pYRdUY1UAfxg2RWhPjYCWTp9HyvsKZY6j2Oxr1yX8z6DDznxYW4ttKTqMCA4BEsEY4zxSq6cuOTUMCq7ELNvPk-TmfC3s2mGflZu_E72qgfyBgj-eFAZ9gKZ1mU0aUBt32OOJJ4V6XBkv74IA2NlS_ilCwOCmv-VchCe5eXP1imMvDiGIMyR0-ox_VjMjWft4fwucraTTh3fXpeig-AbFzHoqhrf9HvVK0BST_JlIGLOSuTxWIfPu1_lF9LaA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-bright via-surface-bright/60 to-transparent"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<div class="relative">
-<label class="font-label-caps text-label-caps text-outline mb-2 block">FULL NAME</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="John Doe" type="text"/>
-</div>
-<div class="relative">
-<label class="font-label-caps text-label-caps text-outline mb-2 block">EMAIL ADDRESS</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="john@example.com" type="email"/>
-</div>
-<div class="relative md:col-span-2">
-<label class="font-label-caps text-label-caps text-outline mb-2 block">SHIPPING ADDRESS</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="House 24, Road 7, Block D, Banani, Dhaka" type="text"/>
-</div>
-<div class="relative">
-<label class="font-label-caps text-label-caps text-outline mb-2 block">CONTACT NUMBER</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface" placeholder="+880 1XXX-XXXXXX" type="tel"/>
-</div>
-<div class="relative">
-<label class="font-label-caps text-label-caps text-outline mb-2 block">CITY</label>
-<select class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:border-primary transition-colors font-body-md text-on-surface appearance-none">
-<option>Dhaka</option>
-<option>Chattogram</option>
-<option>Sylhet</option>
-</select>
+<div class="relative z-10 max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary bg-secondary-fixed px-3 py-1 rounded-full inline-block mb-4">Summer Refresh 2024</span>
+<h1 class="font-display-xl text-display-xl mb-6">Best Market Deals on Premium Gear.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Expertly refurbished, professionally certified, and ready for your next adventure. Join 50,000+ tech enthusiasts upgrading their setups sustainably.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline-md text-[18px] hover:shadow-lg active:scale-95 transition-all">Shop Featured</button>
+<button class="border border-outline-variant bg-surface-container-low/50 backdrop-blur-md px-8 py-4 rounded-lg font-headline-md text-[18px] hover:bg-surface-variant transition-all">Sell Your Gear</button>
 </div>
 </div>
 </section>
-<!-- Payment Selection Section -->
-<section class="space-y-6">
-<div class="flex items-center gap-3">
-<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</span>
-<h2 class="font-headline-md text-headline-md">Payment Method</h2>
-</div>
-<div class="grid grid-cols-1 gap-4">
-<!-- bKash/Nagad Option -->
-<label class="relative flex items-center p-6 bg-surface-container-lowest border border-outline-variant rounded-lg cursor-pointer hover:border-secondary transition-all group">
-<input checked="" class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="payment" type="radio"/>
-<div class="ml-4 flex-grow">
-<span class="font-headline-md text-body-lg block">bKash / Nagad</span>
-<span class="text-on-surface-variant text-body-md">Instant mobile payment</span>
-</div>
-<img alt="Payment Logos" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAji6P-bwV5_NVfJQ1Ft6kFd3kXsQXTcd2yqw2m96XhTqyLb8h7jGMmzBwwSOAMhR-lRNEdCVC2JA6aG7uDdN7ZYqOPDCPsbHUezJVGup3GYy4BKpwHzNOWKOdRgU0aj23AA1U097VTGa1XrGGiawPmRaTx8R83h5Dk-gohmQpbWLGB06lTf-xXIvlP8AbAdgmbXot0RoAk-SigTH3w2ybaYdeMTYD4herpQNwrY1LtOUzmNjOweY2g639JXiDZOZVk24nj6aMlXxg"/>
-</label>
-<!-- Bank Transfer Option -->
-<label class="relative flex items-center p-6 bg-surface-container-lowest border border-outline-variant rounded-lg cursor-pointer hover:border-secondary transition-all group">
-<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="payment" type="radio"/>
-<div class="ml-4 flex-grow flex items-center gap-3">
-<div>
-<span class="font-headline-md text-body-lg block">Bangladesh Bank Transfer</span>
-<span class="text-on-surface-variant text-body-md">Direct bank account settlement</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="account_balance">account_balance</span>
-</label>
-<!-- Visa Card Option -->
-<label class="relative flex items-center p-6 bg-surface-container-lowest border border-outline-variant rounded-lg cursor-pointer hover:border-secondary transition-all group">
-<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="payment" type="radio"/>
-<div class="ml-4 flex-grow">
-<span class="font-headline-md text-body-lg block">Visa Card</span>
-<span class="text-on-surface-variant text-body-md">Credit or Debit cards</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="credit_card">credit_card</span>
-</label>
-</div>
-</section>
-</div>
-<!-- Right Column: Order Summary (Bento/Card) -->
-<div class="lg:col-span-5">
-<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant sticky top-32">
-<h2 class="font-headline-md text-headline-md mb-8">Order Summary</h2>
-<div class="space-y-6 mb-8">
-<!-- Item 1 -->
-<div class="flex gap-4 items-center">
-<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
-<img alt="D9 Earphones" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPrOrPD_5CqC7SXyCSmBqXqmUk9UR58mloCd0k8T-gmqfyo5Tb0GeS5kfv1Qb0tgjfX5fQgdNqK6QnkS7PxyZWKV8B4OPzvNjv5UDnd38461k7552xQn-gQtAtYFWAJZV6LXehTTv6YaHvV5fxNVfAqKy3KEQJH7-NKFe_lJqZu6sD_ybLBPPsZi6xrv6WlT8QYI-McbcgdMsCY3mfMejDzurMQSKXBGlSq5_YeyANbOZf238M-7jRKoCjXjfqU9pqTNRUlc3-Swk"/>
-</div>
-<div class="flex-grow">
-<p class="font-body-md font-bold text-on-surface">D9 Earphones</p>
-<p class="text-on-surface-variant text-body-md">Silver Polish Edition</p>
-</div>
-<p class="font-body-md font-bold">৳1,450</p>
-</div>
-<!-- Item 2 -->
-<div class="flex gap-4 items-center">
-<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
-<img alt="Charger Fan" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1AC0Bb3wwhHPWkugjiolTh0McuSblJX78Wl3xxeZjPgxiOMAT7phW-HkZsx9HYNK8abQZTyfCfGvsLKAgn49-EUfcAaYmGgEdsgaxpFa931uzi-ajKwl_7t5iqG-5w8SM5crluubeScSy84JtSnzyXqx9oZZfcCSD4HhNspvL7v2vwfEUuJYaJBVLfAGPH2BWFblLG07yvaRXX4niKUv0YhhIq6g20tLLl7H8kVLMJnAoCKyM9-pRrpVePb29QtXMR_tJtmMAvk"/>
-</div>
-<div class="flex-grow">
-<p class="font-body-md font-bold text-on-surface">Charger Fan</p>
-<p class="text-on-surface-variant text-body-md">Minimal Desktop White</p>
-</div>
-<p class="font-body-md font-bold">৳2,100</p>
-</div>
-<!-- Item 3 -->
-<div class="flex gap-4 items-center">
-<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
-<img alt="Aurbuds" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv_A_MlhZv4dkfujfD4mdZkWG_DCexnnIaHhpn-M4cdqbkIGphN9NttncA677_UN_bc89lUgPYMLZ_u5QfPrUQHeIspQ0BqvAyRytpCLQBK1T5Otknq2r-VtJni1RBMgqtNtUV5IbcX9r_v9_VIrr5b5v4_OEU1kOMOghq_O9nbGq3bcu32-4feHlCU30InyMcFPesExI3NBGsUGmB3J63TwcsSTAR7nCIK5xbxRDTv39gALoRBg4dWJ-WNMQKqjzviwbRvnhUhWI"/>
-</div>
-<div class="flex-grow">
-<p class="font-body-md font-bold text-on-surface">Aurbuds</p>
-<p class="text-on-surface-variant text-body-md">Deep Black ANC</p>
-</div>
-<p class="font-body-md font-bold">৳3,800</p>
-</div>
-</div>
-<div class="border-t border-outline-variant pt-6 space-y-4">
-<div class="flex justify-between items-center text-on-surface-variant">
-<span class="text-body-md">Subtotal</span>
-<span class="text-body-md">৳7,350</span>
-</div>
-<div class="flex justify-between items-center text-on-surface-variant">
-<span class="text-body-md">Shipping</span>
-<span class="text-body-md">৳60</span>
-</div>
-<div class="flex justify-between items-center pt-4">
-<span class="font-headline-md text-headline-md">Total</span>
-<span class="font-headline-md text-headline-md text-secondary">৳7,410</span>
-</div>
-</div>
-<button class="w-full mt-8 bg-primary text-on-primary py-4 rounded-lg font-headline-md text-body-lg hover:bg-on-surface-variant transition-all active:scale-[0.98] flex items-center justify-center gap-2">
-                        Place Order
-                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+<!-- Category Entry Points: Bento Grid -->
+<section class="px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Gamer Zone -->
+<div class="md:col-span-7 group relative h-[500px] bg-primary rounded-xl overflow-hidden cursor-pointer gamer-glow transition-all duration-500">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="A professional gamer's mechanical keyboard with glowing RGB backlit keys in a dark, moody environment. Intense neon cyan lighting streaks across the frame, highlighting the sharp edges of high-tech peripherals. The scene is dynamic and energetic, capturing the high-performance spirit of the gaming segment with deep shadows and vibrant glow effects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqlYLM1t0jd_w4amVhxbzpSqIKzGn4mdfsPy7ooAJ4IkUkzr7z6Orr6GUQg2qNw0bgxHc9PiI6rsREgku4ZawdM0pjeQ79cQ8GbGj1U4SDMmkjQA7yiYZubKhwnYiQCknrg0vW1qfvy34OSdBy7wh5H3vdYOU7ehmcm264tYLW2bGA4zaX9GGrg-D0mnAOF82Au62iwH_cVTe6oCgD9lvybviMAifxsDuw1cQLfO5u35xOEjcD1l7_zp0O8cJm-y__49zEYjrf6_w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-label-caps text-label-caps text-secondary-container mb-2 block">Performance Hardware</span>
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Gamer Zone</h2>
+<button class="text-white flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Explore New Drops <span class="material-symbols-outlined">arrow_forward</span>
 </button>
-<p class="mt-4 text-center text-on-surface-variant text-label-caps flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-[16px]" data-icon="lock">lock</span>
-                        SECURE ENCRYPTED TRANSACTION
-                    </p>
+</div>
+</div>
+<!-- Lifestyle -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<div class="h-1/2 group relative bg-surface-container-high rounded-xl overflow-hidden cursor-pointer lifestyle-shadow transition-all duration-500">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A beautifully curated home office space featuring a minimalist silver laptop on a light wood desk, complemented by a soft beige ceramic vase and a single green leaf. The lighting is soft and airy, creating a high-key editorial aesthetic that feels sophisticated and calm. Warm wood tones and neutral whites dominate the color palette for a premium lifestyle feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHMdLlszwbIev6dWLhmmpdy5M54jyz12Z15nJh-MABn_9xxLKSgpHJCqyBXnvTkrFXuN2GbXDkdqFtL1spATczgT9VAAMtUDexA3CenoA3unBnbIAgQE372ZtuOv7UcCGsh6YSZKJgYxWDwIoPli9-_hlSaLoTeapq_-keCRxSFkvZ5xppHtqkLlQtedHzGRyWVys4VcAGzWwA7tVje4AGlOmEKr4cxWHlNnVt0CshlESuoOq3MxYAw4ILeJ3TQ5rEdtmJFM2LSjI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline-md text-headline-md text-white">Lifestyle</h3>
+<p class="font-label-caps text-label-caps text-white/80">Curated Workspaces</p>
+</div>
+</div>
+<!-- General Tech -->
+<div class="h-1/2 group relative bg-surface-dim rounded-xl overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-500">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A clean, overhead shot of professional technology devices including a tablet, smartphone, and wireless earbuds arranged neatly on a grey textured surface. The lighting is crisp and even, conveying technical clarity and corporate modernism. A monochromatic grey and white palette with sharp focus highlights the precision of the hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ajPZeDxYW_Ll5UxW6B2y6Z9GbRhcqLejlVnVMQi8JMzeQ9F66cuThpfHbF7BW0fybvqBABPRTMBvfqoVbSxnFgLOiKOEaYNc1lu49ZKn7Y8Z6_Y67IQW4GYXKvFQmiluhYZvBE5uBvuKs0xVJ5GrkcpgRQZMxn06idU_X2ajd1q8Lh3nGNORmxDG39xAyV7-8DHkRKc8qf9VL7pFrL2K1oie11LnrmkBa7KjBrqTDMJho_BOHL8XCupH71DtloQUJeIbRlxk3cE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline-md text-headline-md text-white">General Tech</h3>
+<p class="font-label-caps text-label-caps text-white/80">Everyday Excellence</p>
 </div>
 </div>
 </div>
-</main>
-<!-- Footer (Shared Component) -->
-<footer class="w-full bg-surface-container-highest mt-section-gap">
-<div class="w-full px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between items-start gap-gutter max-w-container-max mx-auto">
-<div class="max-w-xs">
-<div class="font-headline-md text-headline-md font-bold text-primary mb-4">Zero bd</div>
-<p class="font-body-md text-body-md text-on-surface-variant">Your premier destination for high-performance gamer gear and curated lifestyle technology.</p>
 </div>
-<div class="flex flex-wrap gap-x-12 gap-y-8">
-<div class="flex flex-col gap-3">
-<span class="font-label-caps text-label-caps text-on-surface font-bold">COMPANY</span>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">About Us</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Store Locator</a>
+</section>
+<!-- Daily Deals Section -->
+<section class="bg-surface-container-low px-margin-desktop py-section-gap">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2">Daily Deals</h2>
+<p class="text-on-surface-variant">Limited quantities. Refreshed every 24 hours.</p>
 </div>
-<div class="flex flex-col gap-3">
-<span class="font-label-caps text-label-caps text-on-surface font-bold">SUPPORT</span>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Warranty Policy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Privacy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Support</a>
+<div class="flex gap-4 items-center bg-white p-3 rounded-xl border border-outline-variant">
+<span class="font-label-caps text-label-caps text-outline">ENDING IN</span>
+<div class="flex gap-2 text-headline-md font-headline-md text-error">
+<span>12</span>:<span>48</span>:<span>02</span>
 </div>
 </div>
 </div>
-<div class="border-t border-outline-variant/30 py-8 px-margin-desktop text-center">
-<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Zero bd Electronics. Built for Performance.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Deal Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 group hover:-translate-y-2 transition-transform duration-300 lifestyle-shadow">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-4 bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sleek, space grey tablet with a bright colorful screen displaying creative artwork, resting on a white marble surface. The lighting is soft and natural, casting gentle shadows that emphasize the device's slim profile. The setting is clean and high-end, representing a premium tech lifestyle product in a light-mode environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKG1aLTWzoRO3jYPs6FjnHl9r66qGn31SNCOb4p6-UgXMTFuIYH_x4pSGGwOh3TkH7LWc3fnfMJf4q8FP0fUPmCnukaxCYfpgSTlgrSwudinPXg6ysSsW6BiYXfZmCPd1tV0M8_-jgK4id5om9K2ODMIF-VAPB40F0sn2xiqfr67PHkVdqAM23rsGm5TzQ2yisv_LoApOQKxsX70_C0IUSQu8xVzpxNfqPydRi90l5hJfxEKAK_aU-zt_2UAR5j2xHwDx_4fLRgEo"/>
+<div class="absolute top-2 left-2 bg-error text-on-error font-label-caps text-[10px] px-2 py-1 rounded">-35% OFF</div>
 </div>
-</footer>
-</body></html>
+<span class="font-label-caps text-[10px] text-secondary mb-1 block">TABLETS</span>
+<h4 class="font-headline-md text-[18px] mb-2">ProPad 12.9" M2 256GB</h4>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-headline-md text-[20px] font-bold">৳৭৪৯</span>
+<span class="text-on-surface-variant line-through text-body-md">$1,149</span>
+</div>
+<button class="w-full border border-primary text-primary py-2 rounded-lg font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors">Add to Cart</button>
+</div>
+<!-- Deal Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 group hover:-translate-y-2 transition-transform duration-300 lifestyle-shadow">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-4 bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A high-end metallic silver laptop open on a minimalist desk, showing a clean desktop interface. The image uses a shallow depth of field, focusing on the precision-engineered hinge and keyboard texture. The lighting is professional and cool, emphasizing the sleek, modern corporate feel of general technology products." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuP_L6VrTawRzUUljEWaw8nza6v7jaYgMxKb9KwKuHXXzjIz40HbCAq97A216JvQywg7mhzg6PONG7FG27pLrxSM2gRzslLhZl136GTUQx9oh7a7j9qmS11G78iQXfCozJqTq1ztXsCnt8pZ5xg28Zu0dwI6bai7egpS3XpkYYAWIMVjJ9YY8iTbD-LVKXS-Gnx58b_MOi9orFBNCqSJSuQjrUten0fuimXwS-qM4P1vcksjeSqAkkUou20lcWeTPssjofrlAWWLk"/>
+<div class="absolute top-2 left-2 bg-error text-on-error font-label-caps text-[10px] px-2 py-1 rounded">-20% OFF</div>
+</div>
+<span class="font-label-caps text-[10px] text-secondary mb-1 block">LAPTOPS</span>
+<h4 class="font-headline-md text-[18px] mb-2">ZenBook S13 OLED</h4>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-headline-md text-[20px] font-bold">৳৮৯৯</span>
+<span class="text-on-surface-variant line-through text-body-md">$1,129</span>
+</div>
+<button class="w-full border border-primary text-primary py-2 rounded-lg font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors">Add to Cart</button>
+</div>
+<!-- Deal Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 group hover:-translate-y-2 transition-transform duration-300 gamer-glow">
+<div class="relative aspect-square rounded-lg overflow-hidden mb-4 bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A professional gaming mouse with custom side buttons and a glowing blue scroll wheel, positioned on a large dark mousepad. Sharp lighting highlights the matte texture and ergonomic curves of the peripheral. The background is a dark, tech-focused environment with subtle out-of-focus neon accents, emphasizing high-performance gamer gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy1-Fjt2Gi4HmdpJkVarlGZO6Pi8aGonv8b-qYdzdwBdAmrfkMlxi7PoWovtabNEw7RIkDlpNfuwYBoTLIACAkS_2BWYpPA5FnOTGtnPF1L3yT-kW_CFJGJmONhL-noR5fzKFnZluldmRo56EURdrF04fRFXnlV2-lTWZmo6cBgHNxvPVoUfwDPeXR-dFrhaBr88yqm3bhw-Vod9VP3LEsyVZiJ6ZatT_zGUE_dJ8yoQaPsniM7U_DeefhLZdAn_VL713fnwP9E-I"/>
+<div class="absolute top-2 left-2 bg-error text-on-error font-label-caps text-[10px] px-2 py-1 rounded">-50% OFF</div>
+</div>
+<span class="font-label-caps text-[10px] text-secondary mb-1 block">PERIPHERALS</span>
+<h4 class="font-headline-md text-[18px] mb-2">Reflex Elite Mouse</h4>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-headline-md text-[20px] font-bold">৳৫৯</span>
+<span class="text-on-surface-variant line-through text-body-md">$119</span>
+</div>
+<button class="w-full border border-primary text-primary py-2 rounded-lg font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors">Add to Cart</button>
+</div>
+<!-- Deal Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 group hover:-translate-y-2 transition-transform duration-300 lifestyle-shad
